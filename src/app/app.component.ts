@@ -19,7 +19,9 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {}
   onSubmit() {
     console.log(this.textArea);
-    this.textArea = this.textArea.replace(/\s/g, '');
+    if (this.textArea != undefined) {
+      this.textArea = this.textArea.replace(/\s/g, '');
+    }
     if (
       this.textArea == undefined ||
       this.textArea == '' ||
